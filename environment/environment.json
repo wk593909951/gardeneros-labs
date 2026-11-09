@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-09T12:39:41+08:00",
+  "system": "openEuler 24.03 (LTS-SP4)",
+  "architecture": "x86_64",
+  "rust_toolchain_file": "nightly-2026-05-08",
+  "active_toolchain": "nightly-2026-05-08-x86_64-unknown-linux-gnu (overridden by '/mnt/rust-toolchain')",
+  "installed_toolchains": [
+    "nightly-x86_64-unknown-linux-gnu (default)",
+    "nightly-2026-05-08-x86_64-unknown-linux-gnu (active)"
+  ],
+  "rustc": "rustc 1.97.0-nightly (f964de49b 2026-05-07)",
+  "cargo": "cargo 1.97.0-nightly (4f9b52075 2026-05-01)",
+  "cargo_binutils": "cargo-size 0.4.0",
+  "installed_rust_targets": [
+    "riscv64gc-unknown-none-elf",
+    "x86_64-unknown-linux-gnu"
+  ],
+  "installed_rust_components": [
+    "cargo-x86_64-unknown-linux-gnu",
+    "clippy-x86_64-unknown-linux-gnu",
+    "llvm-tools-x86_64-unknown-linux-gnu",
+    "rust-docs-x86_64-unknown-linux-gnu",
+    "rust-src",
+    "rust-std-riscv64gc-unknown-none-elf",
+    "rust-std-x86_64-unknown-linux-gnu",
+    "rustc-x86_64-unknown-linux-gnu",
+    "rustfmt-x86_64-unknown-linux-gnu"
+  ],
+  "qemu_system_riscv64": "QEMU emulator version 11.0.0",
+  "qemu_riscv64": "qemu-riscv64 version 11.0.0",
+  "qemu_configure_targets": [
+    "riscv64-softmmu",
+    "riscv64-linux-user"
+  ],
+  "qemu_source": {
+    "url": "https://download.qemu.org/qemu-11.0.0.tar.xz",
+    "bytes": 141387580,
+    "sha256": "c04ca36012653f32d11c674d370cf52a710e7d3f18c2d8b63e4932052a4854d6"
+  },
+  "required_packages": [
+    "vim-enhanced-9.0.2092-45.oe2403sp4.x86_64",
+    "autoconf-2.71-10.oe2403sp4.noarch",
+    "automake-1.16.5-9.oe2403sp4.noarch",
+    "gcc-12.3.1-110.oe2403sp4.x86_64",
+    "gcc-c++-12.3.1-110.oe2403sp4.x86_64",
+    "kernel-devel-6.6.0-159.4.20.174.oe2403sp4.x86_64",
+    "curl-8.4.0-37.oe2403sp4.x86_64",
+    "libmpc-devel-1.3.1-2.oe2403sp4.x86_64",
+    "mpfr-devel-4.2.1-4.oe2403sp4.x86_64",
+    "gmp-devel-6.3.0-5.oe2403sp4.x86_64",
+    "glib2-2.78.3-19.oe2403sp4.x86_64",
+    "glib2-devel-2.78.3-19.oe2403sp4.x86_64",
+    "make-4.4.1-2.oe2403sp4.x86_64",
+    "cmake-3.31.12-1.oe2403sp4.x86_64",
+    "gawk-5.2.2-3.oe2403sp4.x86_64",
+    "bison-3.8.2-6.oe2403sp4.x86_64",
+    "flex-2.6.4-9.oe2403sp4.x86_64",
+    "texinfo-7.0.3-8.oe2403sp4.x86_64",
+    "gperf-3.1-7.oe2403sp4.x86_64",
+    "libtool-2.4.7-5.oe2403sp4.x86_64",
+    "patchutils-0.4.5-2.oe2403sp4.x86_64",
+    "bc-1.07.1-12.oe2403sp4.x86_64",
+    "python3-3.11.6-46.oe2403sp4.x86_64",
+    "ninja-build-1.13.2-1.oe2403sp4.x86_64",
+    "wget-1.21.4-5.oe2403sp4.x86_64",
+    "xz-5.4.7-8.oe2403sp4.x86_64",
+    "python3-tomli-2.0.1-2.oe2403sp4.noarch",
+    "python3-sphinx-7.0.1-1.oe2403sp4.noarch"
+  ],
+  "base_image": {
+    "id": "sha256:17c15554be2a5bc46023acb6e04d609d77642b8c20e236e88deb18e41ae4558e",
+    "repo_digests": [
+      "openeuler/openeuler@sha256:17c15554be2a5bc46023acb6e04d609d77642b8c20e236e88deb18e41ae4558e"
+    ]
+  },
+  "configured_image": {
+    "bytes": 10141761990,
+    "id": "sha256:e5efe4ab6491715f592c616c06cd2f4b1e98ea00285328b8fe2ce158f127d0e1",
+    "tag": "gardeneros-openeuler:exp0-20261109"
+  },
+  "isolation": {
+    "bind_destination": "/mnt",
+    "container": "gardeneros-exp0-20261109",
+    "memory_gib": 8,
+    "existing_resources_unchanged": true,
+    "cpus": 6,
+    "network": "gardeneros-exp0-net",
+    "published_ports": []
+  },
+  "verification": {
+    "riscv_cross_compile_and_qemu_user_execution": "PASS",
+    "fresh_shell_after_restart": "PASS",
+    "qemu_system_opensbi_startup": "PASS",
+    "offline_image_restore_readonly_code_mount": "PASS",
+    "interactive_entry_script": "PASS"
+  },
+  "guidance_sha256": "a613f8794abadf9575d8c3d39b6b6e548ddc76b4d8ada66491d825e3dd5d47ee",
+  "vim": "VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Sep  7 2026 13:22:31)",
+  "gcc": "gcc (GCC) 12.3.1 (openEuler 12.3.1-110.oe2403sp4)"
+}
