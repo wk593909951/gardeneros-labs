@@ -1,0 +1,12 @@
+/target/
+/build/
+/downloads/
+/.setup/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
