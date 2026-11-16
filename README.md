@@ -1,15 +1,15 @@
-# GardenerOS 实验0 环境配置
+# GardenerOS 实验1 独立的可执行程序
 
-姓名：王凯；学号：24301043。
+24301043 王凯
 
-本分支 `lab0-environment` 是实验0的提交分支。按照课程指导顺序配置 Docker/openEuler、宿主机 Git 目录、独立容器、Rust/RISC-V 工具链和源码构建的 QEMU 11.0.0。每一步实际执行后分别提交，提交说明包含学号和姓名。
+实验代码位于 `os`，固定使用 `nightly-2026-05-08` 和 `riscv64gc-unknown-none-elf`。
 
-宿主机目录：`D:\OSexperiment\experiment0\Submission\GardenerOS`；容器目录：`/mnt`。
+在配置好工具链和 QEMU 的容器内运行：
 
-专用容器：`gardeneros-lab0-submit-20261116`；网络：`gardeneros-lab0-submit-net`；环境镜像：`gardeneros-openeuler:lab0-24301043`。
+```bash
+cd /mnt/os
+cargo build
+qemu-riscv64 target/riscv64gc-unknown-none-elf/debug/os
+```
 
-项目固定 Rust `nightly-2026-05-08`，目标为 `riscv64gc-unknown-none-elf`；QEMU 构建目标为 `riscv64-softmmu,riscv64-linux-user`。
-
-进入环境：`docker start gardeneros-lab0-submit-20261116`，再执行 `docker exec -it -w /mnt gardeneros-lab0-submit-20261116 bash`。
-
-`target/` 忽略所有层级的 Cargo 编译产物。实验0最终提交材料为实验报告，后续实验代码继续由 Git 管理。
+输出为 `Hello, world!` 和学号，退出状态为0。清理编译产物使用 `cargo clean`。
