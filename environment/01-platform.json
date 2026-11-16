@@ -1,0 +1,11 @@
+{
+  "docker_version": "29.8.0",
+  "digest": [
+    "openeuler/openeuler@sha256:17c15554be2a5bc46023acb6e04d609d77642b8c20e236e88deb18e41ae4558e"
+  ],
+  "verified_at": "2026-11-16T12:41:07.5463890+08:00",
+  "image": [
+    "openeuler/openeuler:latest"
+  ],
+  "architecture": "amd64"
+}
