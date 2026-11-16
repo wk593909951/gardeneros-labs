@@ -1,0 +1,8 @@
+{
+  "id": "sha256:21fce28f9bee967170aacca61edb0f8fe859f3482d8979d834c995613711e818",
+  "verified_at": "2026-11-16T13:09:02.6464119+08:00",
+  "qemu": "11.0.0",
+  "image": "gardeneros-openeuler:lab0-24301043",
+  "rust_toolchain": "nightly-2026-05-08",
+  "container": "gardeneros-lab0-submit-20261116"
+}
