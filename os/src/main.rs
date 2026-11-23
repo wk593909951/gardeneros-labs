@@ -13,7 +13,7 @@ global_asm!(include_str!("entry.asm"));
 pub fn rust_main() -> ! {
     clear_bss();
     println!("Hello, world!");
-    loop {}
+    panic!("Shutdown machine!");
 }
 
 fn clear_bss() {
@@ -29,7 +29,4 @@ fn clear_bss() {
     });
 }
 
-#[panic_handler]
-fn panic(_info: &core::panic::PanicInfo) -> ! {
-    loop {}
-}
+mod lang_items;
