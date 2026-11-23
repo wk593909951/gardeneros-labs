@@ -1,19 +1,16 @@
 #![no_std]
 #![no_main]
 
-mod console;
-mod syscall;
+use core::arch::global_asm;
 
-use core::panic::PanicInfo;
+global_asm!(include_str!("entry.asm"));
 
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
+#[unsafe(no_mangle)]
+pub fn rust_main() -> ! {
     loop {}
 }
 
-#[unsafe(no_mangle)]
-pub extern "C" fn _start() -> ! {
-    println!("Hello, world!");
-    println!("Student ID: {}", 24301043);
-    syscall::sys_exit(0)
+#[panic_handler]
+fn panic(_info: &core::panic::PanicInfo) -> ! {
+    loop {}
 }
